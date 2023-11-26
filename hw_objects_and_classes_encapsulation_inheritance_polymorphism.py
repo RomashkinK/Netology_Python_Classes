@@ -16,7 +16,7 @@ class Student:
           else:
               lecturer.grades_from_students[course] = [grade]
       else:
-          return 'Mistake!'
+          return 'Ошибка!'
 
   def __get_average__(self):
       sum = 0
@@ -42,7 +42,6 @@ class Student:
           return f'Средняя оценка выше у студента {self.name}'
       else:
           return f'Средняя оценка выше у студента {other.name}'
-
 
 class Mentor:
   def __init__(self, name, surname):
@@ -79,6 +78,7 @@ class Lecturer(Mentor):
       n = self.__get_average__() > other.__get_average__()
       if n:
           return f'Средняя оценка выше у лектора {self.name}'
+
       else:
           return f'Средняя оценка выше у лектора {other.name}'
 
